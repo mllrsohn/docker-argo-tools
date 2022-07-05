@@ -1,4 +1,5 @@
-FROM quay.io/argoproj/argocd:v2.3.3
+ARG ARGO_VERSION=v2.4.3
+FROM quay.io/argoproj/argocd:$ARGO_VERSION
 
 # Switch to root for the ability to perform install
 USER root
