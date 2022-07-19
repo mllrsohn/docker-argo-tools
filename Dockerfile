@@ -12,5 +12,5 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Switch back to non-root user
-USER 999
+# Stay on root to debug repo issues
+# USER 999

@@ -17,4 +17,4 @@ jobs:
         with:
           build-args: ARGO_VERSION=v2.4.2
           push: true
-          tags: mllrsohn/docker-argo-tools:v2.4.2
+          tags: mllrsohn/docker-argo-tools:v2.4.2-debug
