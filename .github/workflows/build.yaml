@@ -15,11 +15,14 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: docker/build-push-action@v3
         with:
-          build-args: ARGO_VERSION=v2.5.2
+          build-args: |
+            ARGO_VERSION=v2.5.2
           push: true
           tags: mllrsohn/docker-argo-tools:v2.5.2
       - uses: docker/build-push-action@v3
         with:
-          build-args: ARGO_VERSION=v2.5.2 ARGO_USER=root
+          build-args: |
+            ARGO_VERSION=v2.5.2
+            ARGO_USER=root
           push: true
           tags: mllrsohn/docker-argo-tools:v2.5.2-debug
