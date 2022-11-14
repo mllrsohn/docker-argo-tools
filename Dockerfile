@@ -1,4 +1,5 @@
-ARG ARGO_VERSION=v2.4.3
+ARG ARGO_USER=999
+ARG ARGO_VERSION=v2.5.2
 FROM quay.io/argoproj/argocd:$ARGO_VERSION
 
 # Switch to root for the ability to perform install
@@ -13,4 +14,4 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Stay on root to debug repo issues
-# USER 999
+USER $ARGO_USER
